@@ -1,0 +1,217 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 4: Swiss & High-Contrast (Premium Enterprise Government Variant)",
+  "description": "Enterprise-grade data lakehouse UI inspired by Palantir Foundry, Databricks, and Microsoft Fabric. Features a hybrid layout with a dark navy command sidebar and a highly legible, data-dense white content area with soft glassmorphism overlays and colorful, high-contrast KPI cards.",
+  "colors": {
+    "background": {
+      "app": "#F8FAFC",
+      "sidebar": "#0F172A",
+      "card": "#FFFFFF",
+      "header": "rgba(255, 255, 255, 0.8)",
+      "tooltip": "#1E293B"
+    },
+    "text": {
+      "primary": "#0F172A",
+      "secondary": "#475569",
+      "tertiary": "#94A3B8",
+      "inverse": "#F8FAFC",
+      "sidebar_inactive": "#94A3B8"
+    },
+    "primary": {
+      "DEFAULT": "#1E3A8A",
+      "hover": "#1D4ED8",
+      "active": "#1E40AF",
+      "light": "#DBEAFE",
+      "dark": "#172554"
+    },
+    "secondary": {
+      "DEFAULT": "#4F46E5",
+      "hover": "#4338CA",
+      "active": "#3730A3",
+      "light": "#E0E7FF"
+    },
+    "accent": {
+      "DEFAULT": "#0891B2",
+      "hover": "#0E7490",
+      "light": "#CFFAFE",
+      "description": "Used as the teal/cyan accent avoiding the forbidden #1B93A4"
+    },
+    "status": {
+      "success": {
+        "text": "#047857",
+        "bg": "#D1FAE5",
+        "border": "#34D399"
+      },
+      "warning": {
+        "text": "#B45309",
+        "bg": "#FEF3C7",
+        "border": "#FBBF24"
+      },
+      "danger": {
+        "text": "#B91C1C",
+        "bg": "#FEE2E2",
+        "border": "#F87171"
+      },
+      "info": {
+        "text": "#1D4ED8",
+        "bg": "#DBEAFE",
+        "border": "#60A5FA"
+      }
+    },
+    "border": {
+      "default": "#E2E8F0",
+      "light": "#F1F5F9",
+      "glass": "rgba(255, 255, 255, 0.4)",
+      "sidebar": "#1E293B"
+    },
+    "charts": {
+      "palette": [
+        "#1E3A8A",
+        "#4F46E5",
+        "#0891B2",
+        "#059669",
+        "#D97706",
+        "#DC2626",
+        "#7C3AED",
+        "#DB2777",
+        "#2563EB",
+        "#0D9488"
+      ]
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Cabinet Grotesk",
+      "body": "Public Sans",
+      "mono": "JetBrains Mono"
+    },
+    "scale": {
+      "h1": "text-4xl tracking-tight font-bold",
+      "h2": "text-2xl tracking-tight font-semibold",
+      "h3": "text-xl tracking-tight font-semibold",
+      "h4": "text-lg font-medium",
+      "body": "text-sm text-slate-700 leading-relaxed",
+      "body_large": "text-base text-slate-800 leading-relaxed",
+      "small": "text-xs text-slate-500",
+      "overline": "text-xs font-bold uppercase tracking-[0.2em] text-slate-500",
+      "metric_value": "text-3xl font-bold tracking-tight text-slate-900 font-heading",
+      "metric_label": "text-sm font-medium text-slate-500"
+    }
+  },
+  "spacing": {
+    "page_padding": "p-6 md:p-8",
+    "section_gap": "gap-8",
+    "card_padding": "p-6",
+    "widget_gap": "gap-4 md:gap-6",
+    "table_cell_padding": "px-4 py-3",
+    "sidebar_width": "w-64",
+    "sidebar_collapsed_width": "w-16"
+  },
+  "radius": {
+    "card": "rounded-xl",
+    "button": "rounded-lg",
+    "input": "rounded-md",
+    "badge": "rounded-full"
+  },
+  "shadows": {
+    "card": "shadow-[0_2px_10px_rgba(15,23,42,0.04)]",
+    "card_hover": "shadow-[0_8px_30px_rgba(15,23,42,0.08)]",
+    "glass": "shadow-[0_4px_24px_rgba(0,0,0,0.04)]",
+    "dropdown": "shadow-[0_10px_40px_rgba(15,23,42,0.1)]"
+  },
+  "components": {
+    "sidebar": {
+      "structure": "Fixed left, collapsible via toggle. Contains top branding area, middle navigation links, bottom user profile/settings.",
+      "styling": "bg-slate-900 border-r border-slate-800",
+      "links": {
+        "active": "bg-indigo-600 text-white font-medium rounded-lg",
+        "inactive": "text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg",
+        "icon": "w-5 h-5 mr-3"
+      }
+    },
+    "header": {
+      "structure": "Sticky top bar containing global search, workspace tabs, notification center, and profile dropdown.",
+      "styling": "backdrop-blur-xl bg-white/80 border-b border-slate-200 sticky top-0 z-40 h-16 flex items-center px-6"
+    },
+    "kpi_card": {
+      "structure": "Header (Title + Icon), Body (Big Metric Number), Footer (Trend line/Badge).",
+      "styling": "bg-white rounded-xl border border-slate-200 shadow-[0_2px_10px_rgba(15,23,42,0.04)] p-6 transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(15,23,42,0.08)]",
+      "icon_wrapper": "w-10 h-10 rounded-lg flex items-center justify-center"
+    },
+    "table": {
+      "structure": "Command bar at top (Search, Filter, Export), Column headers, Data rows, Pagination footer.",
+      "styling": "w-full text-sm text-left text-slate-600",
+      "header": "bg-slate-50 text-slate-900 font-semibold border-b border-slate-200 uppercase tracking-wider text-xs",
+      "row": "border-b border-slate-100 hover:bg-slate-50 transition-colors",
+      "cell": "px-4 py-3 whitespace-nowrap"
+    },
+    "glassmorphism_panel": {
+      "styling": "backdrop-blur-xl bg-white/70 border border-white/40 shadow-[0_4px_24px_rgba(0,0,0,0.04)] rounded-xl"
+    },
+    "command_bar": {
+      "structure": "Floating or fixed toolbar for table actions, bulk operations, or global shortcuts.",
+      "styling": "bg-slate-900 text-white rounded-full px-4 py-2 flex items-center gap-2 shadow-xl"
+    },
+    "drawer": {
+      "styling": "fixed inset-y-0 right-0 w-96 bg-white shadow-2xl border-l border-slate-200 z-50 transform transition-transform"
+    }
+  },
+  "states": {
+    "loading": "Use skeleton screens for initial load. Animated pulse effect with bg-slate-200 rounded.",
+    "empty": "Display an SVG illustration with a clear, calm message and a primary CTA to create or add data.",
+    "error": "Soft red tinted background panel with alert icon and retry button."
+  },
+  "motion": {
+    "hover": "transition-all duration-200 ease-in-out",
+    "entrance": "animate-in fade-in slide-in-from-bottom-4 duration-500",
+    "stagger": "Delay entrance animations for lists/grids by 50ms increments."
+  },
+  "icons": {
+    "library": "lucide-react",
+    "stroke_width": 1.5,
+    "size": {
+      "small": 16,
+      "default": 20,
+      "large": 24,
+      "huge": 32
+    }
+  },
+  "media": {
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwxfHxkYXRhJTIwbmV0d29yayUyMGFic3RyYWN0fGVufDB8fHx8MTc4MjkwMDYyMnww&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract data network for login/auth screen background or banner"
+      },
+      {
+        "category": "abstract_data",
+        "url": "https://images.unsplash.com/photo-1644325349124-d1756b79dd42?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTN8MHwxfHNlYXJjaHwzfHxkYXRhJTIwbmV0d29yayUyMGFic3RyYWN0fGVufDB8fHx8MTc4MjkwMDYyMnww&ixlib=rb-4.1.0&q=85",
+        "description": "Blue abstract background with lines for AI copilot or data lake feature cards"
+      },
+      {
+        "category": "government_context",
+        "url": "https://images.unsplash.com/photo-1570605505301-0f713202ca7a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwyfHxhaG1lZGFiYWQlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzgyOTAwNjIyfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Adalaj Stepwell / Gujarat architecture for localized flavor in onboarding"
+      },
+      {
+        "category": "flag_emblem",
+        "url": "https://images.unsplash.com/photo-1643603425062-29a8ca831d18?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBnb3Zlcm5tZW50JTIwZW1ibGVtfGVufDB8fHx8MTc4MjkwMDYyMnww&ixlib=rb-4.1.0&q=85",
+        "description": "Indian flag representation for patriotic governance dashboard headers"
+      }
+    ]
+  },
+  "testing": {
+    "attribute": "data-testid",
+    "convention": "kebab-case, role-based (e.g., data-testid='sidebar-nav-link-health')"
+  },
+  "instructions_to_main_agent": [
+    "Use Shadcn UI components extensively for tables, date pickers, dropdowns, tabs, and forms.",
+    "Adopt a compact density for data tables and list views similar to Palantir Foundry.",
+    "Ensure the sidebar uses the dark navy colors defined, and the content area maintains a bright, crisp white interface.",
+    "Add 'data-testid' to all interactive elements for robust E2E testing.",
+    "Do not use generic 'Inter' or 'Roboto' for headings. Use 'Cabinet Grotesk' for headings and 'Public Sans' for body text.",
+    "Implement Recharts or Shadcn Charts for data visualization, strictly adhering to the 10-color categorical palette defined.",
+    "Avoid the exact color hex #1B93A4. Use the provided cyan accent instead.",
+    "Ensure components that overlap content (sticky headers, drawers, dropdowns) use the glassmorphism properties (backdrop-blur-xl)."
+  ]
+}

@@ -1,0 +1,4 @@
+/* GCSR: minimal styles; most styling done via Tailwind + index.css */
+.App {
+  min-height: 100vh;
+}
