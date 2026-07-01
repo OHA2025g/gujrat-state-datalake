@@ -18,7 +18,7 @@ services:
     environment:
       MONGO_URL: mongodb://mongo:27017
       DB_NAME: ${DB_NAME:-test_database}
-      CORS_ORIGINS: ${CORS_ORIGINS:-*}
+      CORS_ORIGINS: ${CORS_ORIGINS:-https://gsrc.demo.agrayianailabs.com}
       JWT_SECRET_KEY: ${JWT_SECRET_KEY:-change-me-in-production}
       JWT_ALGORITHM: ${JWT_ALGORITHM:-HS256}
       JWT_EXPIRE_MINUTES: ${JWT_EXPIRE_MINUTES:-480}
@@ -40,6 +40,9 @@ services:
       args:
         REACT_APP_BACKEND_URL: ""
     restart: unless-stopped
+    environment:
+      BACKEND_HOST: ${BACKEND_HOST:-backend}
+      REACT_APP_BACKEND_URL: ""
     expose:
       - "80"
     depends_on:
