@@ -9,18 +9,30 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+      start_period: 20s
 
   backend:
     build:
       context: ./backend
     restart: unless-stopped
-    env_file:
-      - ./backend/.env
     environment:
       MONGO_URL: mongodb://mongo:27017
+      DB_NAME: ${DB_NAME:-test_database}
+      CORS_ORIGINS: ${CORS_ORIGINS:-*}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:-change-me-in-production}
+      JWT_ALGORITHM: ${JWT_ALGORITHM:-HS256}
+      JWT_EXPIRE_MINUTES: ${JWT_EXPIRE_MINUTES:-480}
+      MISTRAL_API_KEY: ${MISTRAL_API_KEY:-}
+      MISTRAL_MODEL: ${MISTRAL_MODEL:-mistral-large-latest}
     depends_on:
       mongo:
         condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/')"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
 
   frontend:
     build:
@@ -28,8 +40,8 @@ services:
       args:
         REACT_APP_BACKEND_URL: ""
     restart: unless-stopped
-    ports:
-      - "5185:80"
+    expose:
+      - "80"
     depends_on:
       - backend
 

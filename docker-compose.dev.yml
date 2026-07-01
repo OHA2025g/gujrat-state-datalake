@@ -1,0 +1,6 @@
+# Local development override — run with:
+#   docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d
+services:
+  frontend:
+    ports:
+      - "5185:80"
