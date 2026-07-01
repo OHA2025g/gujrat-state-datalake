@@ -4,18 +4,23 @@
 |------|-------|
 | Panel | [http://31.97.207.166:3000/projects/gujrat-state-datalake](http://31.97.207.166:3000/projects/gujrat-state-datalake) |
 | Public URL | **https://gsrc.demo.agrayianailabs.com** |
+| Live URL (works without DNS) | **https://gujrat-state-datalake-stack.fhkvgj.easypanel.host** |
 | GitHub | https://github.com/OHA2025g/gujrat-state-datalake |
 | Compose file | `docker-compose.yml` |
 
 ---
 
-## 0. DNS (required first)
+## 0. DNS (required for custom domain)
 
-Add an **A record** pointing to the server (same as ecourt):
+The app is already deployed. `DNS_PROBE_FINISHED_NXDOMAIN` means the **DNS A record is missing** — not a server failure.
 
-```
-gsrc.demo.agrayianailabs.com  →  31.97.207.166
-```
+In the **Hostinger DNS zone** for `agrayianailabs.com` (nameservers: `ns1.dns-parking.com`), add:
+
+| Type | Name / Host | Value | TTL |
+|------|-------------|-------|-----|
+| A | `gsrc.demo` | `31.97.207.166` | 300 |
+
+Same pattern as the working record for `ecourt.demo.agrayianailabs.com`.
 
 Verify:
 
