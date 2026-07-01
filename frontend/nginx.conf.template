@@ -8,7 +8,7 @@ server {
     add_header X-Frame-Options "SAMEORIGIN" always;
     add_header X-Content-Type-Options "nosniff" always;
     add_header Referrer-Policy "strict-origin-when-cross-origin" always;
-    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://us.i.posthog.com https://us-assets.i.posthog.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' ${CSP_CONNECT_SRC} https://us.i.posthog.com; font-src 'self' data: https://fonts.gstatic.com; frame-ancestors 'self';" always;
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://*.posthog.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://api.fontshare.com; img-src 'self' data: https:; connect-src 'self' ${CSP_CONNECT_SRC} https://*.posthog.com; font-src 'self' data: https://fonts.gstatic.com https://cdn.fontshare.com; worker-src 'self' blob:; frame-ancestors 'self';" always;
 
     location /api/ {
         proxy_pass http://${BACKEND_HOST}:8000/api/;
