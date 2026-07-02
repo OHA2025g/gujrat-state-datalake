@@ -178,7 +178,7 @@ def build_users() -> list[dict]:
             "id": str(uuid.uuid4()),
             "username": "state_admin",
             "email": "state.admin@gcsr.gujarat.gov.in",
-            "full_name": "Vikram Sinha, IAS",
+            "full_name": "P. Bharathi, IAS",
             "password_hash": hash_password("Admin@123"),
             "role": "state_admin",
             "department": "GCSR / DST",

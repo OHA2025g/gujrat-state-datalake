@@ -23,7 +23,7 @@ Design 120 screens organized into 15 modules that support the flow:
 - Collapsible module-grouped sidebar with 120 numbered links
 
 ## Personas
-- **State Admin** (Vikram Sinha, IAS) — full access
+- **State Admin** (P. Bharathi, IAS) — full access
 - **Department Officer** (Dr. Anjali Desai — Health) — dept scope
 - **District Officer** (Rakesh Patel, IAS — Ahmedabad) — district scope
 - **Citizen** (Priya Shah, Vadodara) — self-service portal

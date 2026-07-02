@@ -8,7 +8,7 @@ import { Input } from '../../components/ui/input';
 import { Tabs, TabsList, TabsTrigger } from '../../components/ui/tabs';
 
 const DEMO_ACCOUNTS = [
-  { key: 'state_admin',      title: 'State Admin',         subtitle: 'Vikram Sinha, IAS',      username: 'state_admin',      password: 'Admin@123' },
+  { key: 'state_admin',      title: 'State Admin',         subtitle: 'P. Bharathi, IAS',      username: 'state_admin',      password: 'Admin@123' },
   { key: 'department_officer', title: 'Department Officer', subtitle: 'Dr. Anjali Desai',       username: 'dept_officer',     password: 'Health@123' },
   { key: 'district_officer', title: 'District Collector',  subtitle: 'Rakesh Patel, IAS',      username: 'district_officer', password: 'District@123' },
   { key: 'citizen',          title: 'Citizen',             subtitle: 'Priya Shah',             username: 'citizen',          password: 'Citizen@123' },
